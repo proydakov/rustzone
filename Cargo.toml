@@ -1,0 +1,17 @@
+[package]
+name = "rustzone"
+version = "0.1.0"
+authors = ["Evgeny Proydakov <e.proydakov@gmail.com>"]
+edition = "2018"
+
+[[bin]]
+name = "helloworld"
+path = "src/helloworld.rs"
+
+[[bin]]
+name = "threadtest"
+path = "src/threadtest.rs"
+
+[[bin]]
+name = "threadpanic"
+path = "src/threadpanic.rs"
