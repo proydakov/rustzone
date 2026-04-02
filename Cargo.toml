@@ -4,14 +4,29 @@ version = "0.1.0"
 authors = ["Evgeny Proydakov <e.proydakov@gmail.com>"]
 edition = "2018"
 
-[[bin]]
-name = "helloworld"
-path = "src/helloworld.rs"
+[workspace]
+members = [
+    ".",
+    "hello_tokio",
+]
+
+default-members = [
+    ".",
+    "hello_tokio",
+]
 
 [[bin]]
-name = "threadtest"
-path = "src/threadtest.rs"
+name = "hello_world"
+path = "src/hello_world.rs"
 
 [[bin]]
-name = "threadpanic"
-path = "src/threadpanic.rs"
+name = "thread_test"
+path = "src/thread_test.rs"
+
+[[bin]]
+name = "thread_panic"
+path = "src/thread_panic.rs"
+
+[profile.release]
+opt-level = 3
+lto = true
